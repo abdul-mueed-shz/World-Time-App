@@ -1,6 +1,6 @@
 {
-    "name": "worldweather",
-    "short_name": "worldweather",
+    "name": "worldtime",
+    "short_name": "worldtime",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

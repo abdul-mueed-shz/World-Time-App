@@ -1,4 +1,4 @@
-package com.example.worldweather
+package com.example.worldtime
 
 import io.flutter.embedding.android.FlutterActivity
 

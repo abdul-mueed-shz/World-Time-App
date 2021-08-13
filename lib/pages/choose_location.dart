@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:worldweather/services/worldTime.dart';
+import 'package:worldtime/services/worldTime.dart';
 
 class LocationChoose extends StatefulWidget {
   const LocationChoose({Key? key}) : super(key: key);
@@ -14,7 +14,8 @@ class _LocationChooseState extends State<LocationChoose> {
     WorldTime(url: 'Asia/Karachi', location: 'Karachi', flag: 'pakistan.png'),
     WorldTime(url: 'Africa/Accra', location: 'Accra', flag: 'ghana.png'),
     WorldTime(url: 'America/Jamaica', location: 'Jamaica', flag: 'jamaica.png'),
-    WorldTime(url: 'America/Los_Angeles', location: 'Los Angeles', flag: 'usa.png'),
+    WorldTime(
+        url: 'America/Los_Angeles', location: 'Los Angeles', flag: 'usa.png'),
     WorldTime(url: 'America/New_York', location: 'New York', flag: 'usa.png'),
     WorldTime(url: 'Asia/Seoul', location: 'Seoul', flag: 'south_korea.png'),
     WorldTime(url: 'Asia/Riyadh', location: 'Riyadh', flag: 'saudia.png'),
