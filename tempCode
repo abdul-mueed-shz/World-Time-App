@@ -1,0 +1,47 @@
+int counter = 0;
+
+  void getData() async{
+    //The simulation of network request for the username
+    String username = await Future.delayed(
+      Duration(seconds: 3),
+      () {
+      return 'Leo';}
+    );
+    //The simulation of network request for the bio of the user
+    String bioOfUser = await Future.delayed(
+      Duration(seconds: 2),
+      () {
+      return ('weeb, gamer and a collector');}
+    );
+    print('$username who is a $bioOfUser');
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getData();
+  }
+
+  WorldTime(url: 'Africa/Cairo', location: 'Cairo', flag: 'egypt.png'),
+    WorldTime(url: 'Africa/Accra', location: 'Accra', flag: 'ghana.png'),
+    WorldTime(url: 'America/Jamaica', location: 'Jamaica', flag: 'jamaica.png'),
+    WorldTime(
+        url: 'America/Los_Angeles', location: 'Los Angeles', flag: 'usa.png'),
+    WorldTime(url: 'America/New_York', location: 'New York', flag: 'usa.png'),
+    WorldTime(url: 'Asia/Seoul', location: 'Seoul', flag: 'south_korea.png'),
+    WorldTime(url: 'Asia/Riyadh', location: 'Riyadh', flag: 'saudia.png'),
+
+
+
+    async {
+                    dynamic response =
+                        await Navigator.pushNamed(context, '/location');
+                    setState(() {
+                      timeData = {
+                        'time': response['time'],
+                        'location': response['location'],
+                        'isDaytime': response['isDaytime'],
+                        'flag': response['flag'],
+                      };
+                    });
+                  }
